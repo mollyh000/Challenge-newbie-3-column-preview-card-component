@@ -1,0 +1,192 @@
+
+/* Setting up the colours */
+
+:root {
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VerydDarkCyan: hsl(179, 100%, 13%);
+}
+
+.bright-orange {
+  background-color: var(--BrightOrange);
+}
+
+.bright-orange-text {
+  color: var(--BrightOrange);
+}
+
+.dark-cyan {
+  background-color: var(--DarkCyan);
+}
+
+.dark-cyan-text {
+  color: var(--DarkCyan);
+}
+
+.very-dark-cyan {
+  background-color: var(--VerydDarkCyan);
+}
+
+.very-dark-cyan-text {
+  color: var(--VerydDarkCyan);
+}
+
+
+/* Fonts and what not */
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 95%);
+}
+
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+}
+
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+/* Layouts */
+
+
+main {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  margin: auto;
+  height: 35rem;
+}
+
+.grid div:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.grid div:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+
+.colomn-style {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+/* Buttons */
+
+
+button {
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 30rem;
+  border-style: none;
+  padding: 1rem;
+  width: 70%;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 100;
+  border-style: solid;
+  border-color: transparent;
+  transition: all 0.15s;
+}
+
+
+button:hover {
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  margin: 1;
+}
+
+
+
+/* Responsive */
+
+
+
+@media screen and (max-width: 1300px) {
+
+  .grid {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+
+  .grid {
+    width: 90%;
+    height: 40rem;
+  }
+
+  button {
+    font-size: 0.75rem
+  }
+
+}
+
+@media screen and (max-width: 730px) {
+
+  h1 {
+    font-size: 2rem;
+
+  }
+
+  p {
+    font-size: 1rem;
+
+  }
+
+  button {
+    padding: 0.5rem;    
+  }
+
+}
+
+
+@media screen and (max-width: 670px) {
+  
+  main {
+    height: 100%;
+    grid-template-rows: 5rem auto 5rem ;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .grid div:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .grid div:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .car-info {
+    padding-bottom: 3rem;
+  }
+
+}
